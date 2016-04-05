@@ -1,0 +1,1301 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>NTACT</title>
+<link rel="stylesheet" href="js/jquery-ui-1.11.4.custom/jquery-ui.min.css">
+<link rel="stylesheet" href="css/ToggleSwitch.css">
+<link rel="stylesheet" href="css/jquery.selectbox.css">
+<link rel="stylesheet" href="css/custom-style.css">
+<script src="js/jquery-1.7.2.min.js"></script>
+<script src="js/jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
+<script src="js/jquery.nicescroll.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/ToggleSwitch.js"></script>
+<script src="js/jquery.selectbox-0.2.min.js"></script>
+<script src="js/script.js"></script>
+<script></script>
+<style>
+#chartjs-tooltip {
+     opacity: 0;
+     position: absolute;
+     background: rgba(0, 0, 0, .7);
+     color: white;
+     padding: 3px;
+     border-radius: 3px;
+     -webkit-transition: all .1s ease;
+     transition: all .1s ease;
+     pointer-events: none;
+     -webkit-transform: translate(-50%, 0);
+     transform: translate(-50%, 0);
+ }
+</style>
+</head>
+
+<body>
+<div class="leftpanel">
+	<div class="leftpanel_1">
+		<div class="logo"> </div>
+	</div>
+	<div class="leftpanel_1">
+		<div class="accounts"> <span class="acct">Accounts</span> <span class="setting-icon"></span> </div>
+		<nav>
+			<ul id="menuViewport">
+				<li class="menuAnim"><a><div><span>Dashboard</span></div><span>$12,354</span></a></li>
+				<li class="menuAnim menu">
+					<div class="menurow"><a><span>Cash <img src="images/up-arrow.png" width="10" height="5" alt="up-arrow"></span><span>$13,203</span></a></div>
+					<ul>
+						<li><a>
+							<div><span>Wells Fargo</span><span>Checking - 4228</span></div>
+							<div><span>$2,869</span></div>
+							</a></li>
+						<li><a>
+							<div><span>Wells Fargo</span><span>Business Checking - 9837</span></div>
+							<div><span>$3,109</span></div>
+							</a></li>
+						<li><a>
+							<div><span>Wells Fargo</span><span>Savings - 8690</span></div>
+							<div><span>$7,225</span></div>
+							</a></li>
+					</ul>
+				</li>
+				<li class="menuAnim menu">
+					<div class="menurow"><a><span>Credit <img src="images/up-arrow.png" width="10" height="5" alt="up-arrow"></span><span>-$849</span></a></div>
+					<ul>
+						<li><a>
+							<div><span>Wells Fargo</span><span>Platinum Card - 4228</span></div>
+							<div><span>-$849</span></div>
+							</a></li>
+						
+					</ul>
+				</li>
+			</ul>
+		</nav>
+	</div>
+</div>
+<div class="body">
+	<header>
+		<div class="header_1">
+			<div><span class="sign-out" id="sn-out" tabindex="99999999">SIGN OUT</span> <span class="profile-dropdown">
+				<div class="notific a"> adam@websaucestudio.com <img src="images/dn-arrow-black.png" width="10" height="5" alt="black"></div>
+				<div class="notific b">
+					<div class="notify-icon" tabindex="900000000"> <img src="images/bell.png" width="14" height="18" alt="bell">
+						<div class="notify">3</div>
+						<div class="notify-dialog">
+							<div class="head1"> <span>Notifications</span> <span>Mark all as read</span> </div>
+							<div class="in">
+								<div class="opt"> <span class="image_1"><img src="images/clock-icon.png" width="20" height="21" alt="clock"></span> <span class="text_1">
+									<p>AT&T</p>
+									<p>Mon .<img src="images/dot.png" width="3" height="3" alt="dot"> Jan 25th</p>
+									</span> <span class="image_2"><img src="images/tick.png" width="18" height="14" alt="tick"></span> <span class="text_2">$12<sup>05</sup></span> </div>
+								<div class="opt"> <span class="image_1"><img src="images/clock-icon.png" width="20" height="21" alt="clock"></span> <span class="text_1">
+									<p>AT&T</p>
+									<p>Mon <img src="images/dot.png" width="3" height="3" alt="dot"> Jan 25th</p>
+									</span> <span class="image_2"><img src="images/tick.png" width="18" height="14" alt="tick"></span> <span class="text_2">$12<sup>05</sup></span> </div>
+								<div class="opt"> <span class="image_1"><img src="images/clock-icon.png" width="20" height="21" alt="clock"></span> <span class="text_1">
+									<p>AT&T</p>
+									<p>Mon <img src="images/dot.png" width="3" height="3" alt="dot"> Jan 25th</p>
+									</span> <span class="image_2"><img src="images/tick.png" width="18" height="14" alt="tick"></span> <span class="text_2">$12<sup>05</sup></span> </div>
+							</div>
+						</div>
+					</div>
+				</div>
+				</span> </div>
+			<div class="sub-menu">
+				<div class="sub1"><a href="" class="selected">ACCOUNTS</a></div>
+				<div class="sub1"><a href="">IDENTITY GUARD</a></div>
+			</div>
+		</div>
+		<div class="header_2"> <span class="dashboard-heading">Dashboard</span> <span class="time-dropdown"> <img src="images/shape2.png" width="15" height="17" alt="shp" class="im1"> <span id="since">Since Beginning of Time</span> <img src="images/dn-arr.png" width="10" height="5" alt="down arrow" class="im2">
+			<div class="time-drop t">
+				<div class="op time-drop-header mn">Since Beginning of Time</div>
+				<div class="op options margin-top mn">This week</div>
+				<div class="op options mn">This month</div>
+				<div class="op options margin-bottom mn">Last month</div>
+				<div class="time-drop-header2">Date Range</div>
+				<div class="from">
+					<input type="text" class="datepicker" value="" tabindex="1000000" id="date-from">
+					<span class="img"><img src="images/tick-green.png" width="18" height="14" alt="tick"></span><span class="txt">From</span> </div>
+				<div class="from">
+					<input type="text" class="datepicker" value="" tabindex="1000000" id="date-to">
+					<span class="img"><img src="images/tick-green.png" width="18" height="14" alt="tick"></span><span class="txt">To</span> </div>
+			</div>
+			</span> </div>
+		<div class="work-area" id="work-area">
+			<div class="gutter">
+				<div class="left-panel">
+					<div class="top-section">
+						<div class="header">
+							<div>
+								<h1>Transactions</h1>
+								<span class="allcat" tabindex="900000000"><span id="allcat">All Categories</span> <img src="images/dn-arrow-black.png" width="10" height="5" alt="arrow">
+								<div class="time-drop tran" tabindex="900000000">
+									<div class="op time-drop-header"><span class="d">All Transactions</span></div>
+									<div class="op options margin-top"><span><img src="images/shap1.png" alt="food"></span><span class="d">Food</span></div>
+									<div class="op options"><span><img src="images/shape3.png" alt="bills"></span> <span class="d">Bills</span></div>
+									<div class="op options"><span><img src="images/shape4.png" alt="transportation"></span> <span class="d">Transportation</span></div>
+									<div class="op options margin-bottom"><span><img src="images/shape5.png" alt="other"></span> <span class="d">Others</span></div>
+									<div class="op time-drop-header2 dn"><span><img src="images/dollar.png" alt="income"></span><span class="dn d">Income</span></div>
+								</div>
+								</span> </div>
+							<div class="clearfix"></div>
+						</div>
+						<div class="inside2 row-scroller" id="transaction">
+							<div class="blocks" id="blocks1">
+							<div class="rows">
+								<div class="image"><img src="images/shape4.png" alt="image"></div>
+								<div class="text">
+									<h2>Eliana’s Cafe</h2>
+									<p>Thu <img src="images/dot.png" width="3" height="3" alt="dot"> Jan 28th</p>
+								</div>
+								<div class="misc">
+									<h3>$12.05</h3>
+									<p>Checking - 4228</p>
+								</div>
+							</div>
+							<div class="rows">
+								<div class="image"><img src="images/shape3.png" alt="image"></div>
+								<div class="text">
+									<h2>Comcast</h2>
+									<p>Thu <img src="images/dot.png" width="3" height="3" alt="dot"> Jan 28th</p>
+								</div>
+								<div class="misc">
+									<h3>$12.05</h3>
+									<p>Checking - 4228</p>
+								</div>
+							</div>
+							<div class="rows">
+								<div class="image"><img src="images/shape4.png" alt="image"></div>
+								<div class="text">
+									<h2>Uber</h2>
+									<p>Thu <img src="images/dot.png" width="3" height="3" alt="dot"> Jan 28th</p>
+								</div>
+								<div class="misc">
+									<h3>$12.05</h3>
+									<p>Checking - 4228</p>
+								</div>
+							</div>
+							<div class="rows">
+								<div class="image"><img src="images/dollar.png" alt="image"></div>
+								<div class="text">
+									<h2>PayPal</h2>
+									<p>Thu <img src="images/dot.png" width="3" height="3" alt="dot"> Jan 28th</p>
+								</div>
+								<div class="misc">
+									<h3 class="green">+$2250.05</h3>
+									<p>Checking - 4228</p>
+								</div>
+							</div>
+							<div class="rows">
+								<div class="image"><img src="images/shape5.png" alt="image"></div>
+								<div class="text">
+									<h2>Fed Ex</h2>
+									<p>Thu <img src="images/dot.png" width="3" height="3" alt="dot"> Jan 28th</p>
+								</div>
+								<div class="misc">
+									<h3>$12.05</h3>
+									<p>Checking - 4228</p>
+								</div>
+							</div>
+							<div class="rows">
+								<div class="image"><img src="images/shap1.png" alt="image"></div>
+								<div class="text">
+									<h2>Eliana’s Cafe</h2>
+									<p>Thu <img src="images/dot.png" width="3" height="3" alt="dot"> Jan 28th</p>
+								</div>
+								<div class="misc">
+									<h3>$12.05</h3>
+									<p>Checking - 4228</p>
+								</div>
+							</div>
+							<div class="rows">
+								<div class="image"><img src="images/shape3.png" alt="image"></div>
+								<div class="text">
+									<h2>Comcast</h2>
+									<p>Thu <img src="images/dot.png" width="3" height="3" alt="dot"> Jan 28th</p>
+								</div>
+								<div class="misc">
+									<h3>$12.05</h3>
+									<p>Checking - 4228</p>
+								</div>
+							</div>
+							<div class="rows">
+								<div class="image"><img src="images/shape5.png" alt="image"></div>
+								<div class="text">
+									<h2>IKEA</h2>
+									<p>Thu <img src="images/dot.png" width="3" height="3" alt="dot"> Jan 28th</p>
+								</div>
+								<div class="misc">
+									<h3>$12.05</h3>
+									<p>Checking - 4228</p>
+								</div>
+							</div>
+							<div class="rows">
+								<div class="image"><img src="images/dollar.png" alt="image"></div>
+								<div class="text">
+									<h2>PayPal</h2>
+									<p>Thu <img src="images/dot.png" width="3" height="3" alt="dot"> Jan 28th</p>
+								</div>
+								<div class="misc">
+									<h3 class="green">+$12.05</h3>
+									<p>Checking - 4228</p>
+								</div>
+							</div>
+							<div class="rows">
+								<div class="image"><img src="images/shap1.png" alt="image"></div>
+								<div class="text">
+									<h2>Eliana’s Cafe</h2>
+									<p>Thu <img src="images/dot.png" width="3" height="3" alt="dot"> Jan 28th</p>
+								</div>
+								<div class="misc">
+									<h3>$12.05</h3>
+									<p>Checking - 4228</p>
+								</div>
+							</div>
+							</div>
+						</div>
+						
+						
+						<div class="show-more-btn"><span>SHOW MORE</span></div>
+						
+					</div>
+					<div class="top-section bottom-section set-section-bottom-margin">
+						<div class="header">
+							<div>
+								<h1>Bill Reminders</h1>
+								<span>These look like bills to us. Let us know if you'd like a heads up before they're due.</span> </div>
+							<div class="clearfix"></div>
+						</div>
+						<div class="inside2 row-scroller">
+							<div class="row-block">
+								<div class="rows">
+									<div class="in">
+										<div class="image"><img src="images/clock-icon.png" alt="image"></div>
+										<div class="text">
+											<h2>Uber</h2>
+											<p>Thu <img src="images/dot.png" width="3" height="3" alt="dot"> Jan 28th</p>
+										</div>
+										<div class="misc">
+											<h4>$12<sup>05</sup></h4>
+										</div>
+									</div>
+								</div>
+								<div class="collapsible">
+									<div class="col1">
+										<h6>Name</h6>
+										<input type="text" value="AT&T">
+									</div>
+									<div class="col2">
+										<h6>Amount</h6>
+										<input type="text" value="$16.05">
+									</div>
+									<div class="col3">
+										<h6>Repeats Monthly</h6>
+										<input type="text" value="Mar 22nd" class="date">
+									</div>
+									<div class="clearfix"></div>
+									<div class="bot-row">
+										<div class="col1"> <span class="delete">DELETE REMINDER</span></div>
+										<div class="col4"> <span>CANCEL</span> <a href="#">UPDATE REMINDER</a> </div>
+									</div>
+								</div>
+							</div>
+							<div class="row-block">
+								<div class="rows">
+									<div class="in">
+										<div class="image"><img src="images/clock-icon.png" alt="image"></div>
+										<div class="text">
+											<h2>Uber</h2>
+											<p>Thu <img src="images/dot.png" width="3" height="3" alt="dot"> Jan 28th</p>
+										</div>
+										<div class="misc">
+											<h4>$12<sup>05</sup></h4>
+										</div>
+									</div>
+								</div>
+								<div class="collapsible">
+									<div class="col1">
+										<h6>Name</h6>
+										<input type="text" value="AT&T">
+									</div>
+									<div class="col2">
+										<h6>Amount</h6>
+										<input type="text" value="$16.05">
+									</div>
+									<div class="col3">
+										<h6>Repeats Monthly</h6>
+										<input type="text" value="Mar 22nd" class="date">
+									</div>
+									<div class="clearfix"></div>
+									<div class="bot-row">
+										<div class="col1"> <span class="delete">DELETE REMINDER</span></div>
+										<div class="col4"> <span>CANCEL</span> <a href="#">UPDATE REMINDER</a> </div>
+									</div>
+								</div>
+							</div>
+							<div class="row-block">
+								<div class="rows">
+									<div class="in">
+										<div class="image"><img src="images/clock-icon.png" alt="image"></div>
+										<div class="text">
+											<h2>Uber</h2>
+											<p>Thu <img src="images/dot.png" width="3" height="3" alt="dot"> Jan 28th</p>
+										</div>
+										<div class="misc">
+											<h4>$12<sup>05</sup></h4>
+										</div>
+									</div>
+								</div>
+								<div class="collapsible">
+									<div class="col1">
+										<h6>Name</h6>
+										<input type="text" value="AT&T">
+									</div>
+									<div class="col2">
+										<h6>Amount</h6>
+										<input type="text" value="$16.05">
+									</div>
+									<div class="col3">
+										<h6>Repeats Monthly</h6>
+										<input type="text" value="Mar 22nd" class="date">
+									</div>
+									<div class="clearfix"></div>
+									<div class="bot-row">
+										<div class="col1"> <span class="delete">DELETE REMINDER</span></div>
+										<div class="col4"> <span>CANCEL</span> <a href="#">UPDATE REMINDER</a> </div>
+									</div>
+								</div>
+							</div>
+							<div class="row-block">
+								<div class="rows">
+									<div class="in">
+										<div class="image"><img src="images/clock-icon.png" alt="image"></div>
+										<div class="text">
+											<h2>Uber</h2>
+											<p>Thu <img src="images/dot.png" width="3" height="3" alt="dot"> Jan 28th</p>
+										</div>
+										<div class="misc">
+											<h4>$12<sup>05</sup></h4>
+										</div>
+									</div>
+								</div>
+								<div class="collapsible">
+									<div class="col1">
+										<h6>Name</h6>
+										<input type="text" value="AT&T">
+									</div>
+									<div class="col2">
+										<h6>Amount</h6>
+										<input type="text" value="$16.05">
+									</div>
+									<div class="col3">
+										<h6>Repeats Monthly</h6>
+										<input type="text" value="Mar 22nd" class="date">
+									</div>
+									<div class="clearfix"></div>
+									<div class="bot-row">
+										<div class="col1"> <span class="delete">DELETE REMINDER</span></div>
+										<div class="col4"> <span>CANCEL</span> <a href="#">UPDATE REMINDER</a> </div>
+									</div>
+								</div>
+							</div>
+							<div class="row-block">
+								<div class="rows">
+									<div class="in">
+										<div class="image"><img src="images/clock-icon.png" alt="image"></div>
+										<div class="text">
+											<h2>Uber</h2>
+											<p>Thu <img src="images/dot.png" width="3" height="3" alt="dot"> Jan 28th</p>
+										</div>
+										<div class="misc">
+											<h4>$12<sup>05</sup></h4>
+										</div>
+									</div>
+								</div>
+								<div class="collapsible">
+									<div class="col1">
+										<h6>Name</h6>
+										<input type="text" value="AT&T">
+									</div>
+									<div class="col2">
+										<h6>Amount</h6>
+										<input type="text" value="$16.05">
+									</div>
+									<div class="col3">
+										<h6>Repeats Monthly</h6>
+										<input type="text" value="Mar 22nd" class="date">
+									</div>
+									<div class="clearfix"></div>
+									<div class="bot-row">
+										<div class="col1"> <span class="delete">DELETE REMINDER</span></div>
+										<div class="col4"> <span>CANCEL</span> <a href="#">UPDATE REMINDER</a> </div>
+									</div>
+								</div>
+							</div>
+							<div class="row-block">
+								<div class="rows">
+									<div class="in">
+										<div class="image"><img src="images/clock-icon.png" alt="image"></div>
+										<div class="text">
+											<h2>Uber</h2>
+											<p>Thu <img src="images/dot.png" width="3" height="3" alt="dot"> Jan 28th</p>
+										</div>
+										<div class="misc">
+											<h4>$12<sup>05</sup></h4>
+										</div>
+									</div>
+								</div>
+								<div class="collapsible">
+									<div class="col1">
+										<h6>Name</h6>
+										<input type="text" value="AT&T">
+									</div>
+									<div class="col2">
+										<h6>Amount</h6>
+										<input type="text" value="$16.05">
+									</div>
+									<div class="col3">
+										<h6>Repeats Monthly</h6>
+										<input type="text" value="Mar 22nd" class="date">
+									</div>
+									<div class="clearfix"></div>
+									<div class="bot-row">
+										<div class="col1"> <span class="delete">DELETE REMINDER</span></div>
+										<div class="col4"> <span>CANCEL</span> <a href="#">UPDATE REMINDER</a> </div>
+									</div>
+								</div>
+							</div>
+							<div class="row-block">
+								<div class="rows">
+									<div class="in">
+										<div class="image"><img src="images/clock-icon.png" alt="image"></div>
+										<div class="text">
+											<h2>Uber</h2>
+											<p>Thu <img src="images/dot.png" width="3" height="3" alt="dot"> Jan 28th</p>
+										</div>
+										<div class="misc">
+											<h4>$12<sup>05</sup></h4>
+										</div>
+									</div>
+								</div>
+								<div class="collapsible">
+									<div class="col1">
+										<h6>Name</h6>
+										<input type="text" value="AT&T">
+									</div>
+									<div class="col2">
+										<h6>Amount</h6>
+										<input type="text" value="$16.05">
+									</div>
+									<div class="col3">
+										<h6>Repeats Monthly</h6>
+										<input type="text" value="Mar 22nd" class="date">
+									</div>
+									<div class="clearfix"></div>
+									<div class="bot-row">
+										<div class="col1"> <span class="delete">DELETE REMINDER</span></div>
+										<div class="col4"> <span>CANCEL</span> <a href="#">UPDATE REMINDER</a> </div>
+									</div>
+								</div>
+							</div>
+							<div class="row-block">
+								<div class="rows">
+									<div class="in">
+										<div class="image"><img src="images/clock-icon.png" alt="image"></div>
+										<div class="text">
+											<h2>Uber</h2>
+											<p>Thu <img src="images/dot.png" width="3" height="3" alt="dot"> Jan 28th</p>
+										</div>
+										<div class="misc">
+											<h4>$12<sup>05</sup></h4>
+										</div>
+									</div>
+								</div>
+								<div class="collapsible">
+									<div class="col1">
+										<h6>Name</h6>
+										<input type="text" value="AT&T">
+									</div>
+									<div class="col2">
+										<h6>Amount</h6>
+										<input type="text" value="$16.05">
+									</div>
+									<div class="col3">
+										<h6>Repeats Monthly</h6>
+										<input type="text" value="Mar 22nd" class="date">
+									</div>
+									<div class="clearfix"></div>
+									<div class="bot-row">
+										<div class="col1"> <span class="delete">DELETE REMINDER</span></div>
+										<div class="col4"> <span>CANCEL</span> <a href="#">UPDATE REMINDER</a> </div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					
+					
+					
+					
+					
+				</div>
+				<div class="right-panel">
+					<div class="top-section">
+						<div class="inside">
+							<div>
+								<h1>Budgets</h1>
+								<span class="p">Based on average monthly budget</span> </div>
+							<div class="budget">
+								<div class="image"><img src="images/shap1.png" width="18" height="20" alt="shape"></div>
+								<div class="bar-holder"> <span>Food</span> <span>$358
+									<div class="off">of</div>
+									$500</span>
+									<div class="clearfix"></div>
+									<div class="bar">
+										<div class="progress" id="food"></div>
+									</div>
+								</div>
+							</div>
+							<div class="budget">
+								<div class="image"><img src="images/shape3.png" width="18" height="20" alt="shape"></div>
+								<div class="bar-holder"> <span>Bills</span> <span>$1715
+									<div class="off">of</div>
+									$1800</span>
+									<div class="clearfix"></div>
+									<div class="bar">
+										<div class="progress" id="bills"></div>
+									</div>
+								</div>
+							</div>
+							<div class="budget">
+								<div class="image"><img src="images/shape4.png" width="18" height="20" alt="shape"></div>
+								<div class="bar-holder"> <span>Transportation</span> <span>$350
+									<div class="off">of</div>
+									$300</span>
+									<div class="clearfix"></div>
+									<div class="bar">
+										<div class="progress" id="transport"></div>
+									</div>
+								</div>
+							</div>
+							<div class="budget">
+								<div class="image"><img src="images/shape5.png" width="18" height="20" alt="shape"></div>
+								<div class="bar-holder"> <span>Other</span> <span>$200
+									<div class="off">of</div>
+									$800</span>
+									<div class="clearfix"></div>
+									<div class="bar">
+										<div class="progress" id="other"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="bottom-section">
+						<div class="inside">
+							<h1>Spending by Category</h1>
+							<div id="canvas-holder">
+								<div class="inner-cutout"> <span class="s1">TOTAL</span> <span class="s2">$38,967</span> </div>
+								<canvas id="chart-area" width="150" height="150"/>
+							</div>
+							
+							<!--<div class="pie-chart">
+						<img src="images/pie-chart.png" width="276" height="276" alt="pie-chart"></div>
+					
+						</div>-->
+							
+							<div class="legend">
+								<div class="legend-row">
+									<div class="color" id="color1"></div>
+									<h3>Food</h3>
+									<div class="price">$17,862</div>
+									<!--<h4>31%</h4>-->
+								</div>
+								<div class="legend-row">
+									<div class="color" id="color2"></div>
+									<h3>Other</h3>
+									<div class="price">$12,351</div>
+									<!--<h4>25%</h4>-->
+								</div>
+								<div class="legend-row">
+									<div class="color" id="color3"></div>
+									<h3>Bills</h3>
+									<div class="price">$7,049</div>
+									<!--<h4>16%</h4>-->
+								</div>
+								<div class="legend-row">
+									<div class="color" id="color4"></div>
+									<h3>Transportation</h3>
+									
+									<div class="price">$4,962</div>
+									<!--<h4>28%</h4>-->
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					
+					
+					
+					
+					<div class="bottom-section income">
+						<img src="images/bot-gradient.png" width="385" height="11" alt="bot gradient" class="gradient">
+<div class="top">
+	<div class="inside">
+							<h1>Net Income March</h1>
+							<div class="table-left"><span>INCOME</span>$8,203</div>
+							<div class="table-left"><span>SPENT</span>$4,168</div>
+							<div class="table-left"><span>NET</span>$4,035</div>
+							<div class="table-left-down down1">
+							–$5,302
+							</div>
+							<div class="table-left-down down2">
+							0
+							</div>
+							<div class="table-left-down down3">
+							$5,302
+							</div>
+						</div>
+					</div>
+						<div class="graph" id="graph-bot">
+							<div class="month">
+								<div class="mnln">JAN</div>
+								<div class="mnln">FEB</div>
+								<div class="mnln">MAR</div>
+								<div class="mnln">APR</div>
+								<div class="mnln">MAY</div>
+								<div class="mnln">JUN</div>
+								<div class="mnln">JUL</div>
+								<div class="mnln">AUG</div>
+								<div class="mnln">SEP</div>
+								<div class="mnln">OCT</div>
+								<div class="mnln">NOV</div>
+								<div class="mnln">DEC</div>
+							</div>
+							<div class="graph-area">
+								<div class="gr" id="gr1">
+									<div class="graph-row ">
+										<div class="bar-red bl"><div class="in"></div></div>
+									</div>
+									<div class="graph-row">
+										<div class="bar-green br"><div class="in"></div></div>
+									</div>
+								</div>
+								<div class="gr" id="gr2">
+									<div class="graph-row">
+										<div class="bar-red bl"><div class="in"></div></div>
+									</div>
+									<div class="graph-row">
+										<div class="bar-green br"><div class="in"></div></div>
+									</div>
+								</div>
+								<div class="gr" id="gr3">
+									<div class="graph-row">
+										<div class="bar-red bl"><div class="in"></div></div>
+									</div>
+									<div class="graph-row">
+										<div class="bar-green br"><div class="in"></div></div>
+									</div>
+								</div>
+								<div class="gr" id="gr4">
+									<div class="graph-row">
+										<div class="bar-red bl"><div class="in"></div></div>
+									</div>
+									<div class="graph-row">
+										<div class="bar-green br"><div class="in"></div></div>
+									</div>
+								</div>
+								<div class="gr" id="gr5">
+									<div class="graph-row">
+										<div class="bar-red bl"><div class="in"></div></div>
+									</div>
+									<div class="graph-row">
+										<div class="bar-green br"><div class="in"></div></div>
+									</div>
+								</div>
+								<div class="gr" id="gr6">
+									<div class="graph-row">
+										<div class="bar-red bl"><div class="in"></div></div>
+									</div>
+									<div class="graph-row">
+										<div class="bar-green br"><div class="in"></div></div>
+									</div>
+								</div>
+								<div class="gr" id="gr7">
+									<div class="graph-row">
+										<div class="bar-red bl"><div class="in"></div></div>
+									</div>
+									<div class="graph-row">
+										<div class="bar-green br"><div class="in"></div></div>
+									</div>
+								</div>
+								<div class="gr" id="gr8">
+									<div class="graph-row">
+										<div class="bar-red bl"><div class="in"></div></div>
+									</div>
+									<div class="graph-row">
+										<div class="bar-green br"><div class="in"></div></div>
+									</div>
+								</div>
+								<div class="gr" id="gr9">
+									<div class="graph-row">
+										<div class="bar-red bl"><div class="in"></div></div>
+									</div>
+									<div class="graph-row">
+										<div class="bar-green br"><div class="in"></div></div>
+									</div>
+								</div>
+								<div class="gr" id="gr10">
+									<div class="graph-row">
+										<div class="bar-red bl"><div class="in"></div></div>
+									</div>
+									<div class="graph-row">
+										<div class="bar-green br"><div class="in"></div></div>
+									</div>
+								</div>
+								<div class="gr" id="gr11">
+									<div class="graph-row">
+										<div class="bar-red bl"><div class="in"></div></div>
+									</div>
+									<div class="graph-row">
+										<div class="bar-green br"><div class="in"></div></div>
+									</div>
+								</div>
+								<div class="gr" id="gr12">
+									<div class="graph-row">
+										<div class="bar-red bl"><div class="in"></div></div>
+									</div>
+									<div class="graph-row">
+										<div class="bar-green br"><div class="in"></div></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					
+					
+				</div>
+			</div>
+		</div>
+	</header>
+</div>
+
+
+
+
+
+<div class="overlay"></div>
+<div class="lightbox-popup">
+	<div class="lightbox-popup-leftpanel">
+		<h2>Settings</h2>
+		<nav>
+		<div class="menu selected" data-id="1">Accounts</div>
+		<div class="menu" data-id="2">Sign in & Security</div>
+		<div class="menu" data-id="3">Notifications</div>
+		<div class="menu" data-id="4">Monthly Budgets</div>
+		</nav>
+	</div>
+	<div class="lightbox-popup-rightpanel views">
+		<div class="rightpanel-header">
+			<h2 id="popup-heading">Accounts</h2>
+			<span></span>
+			<div class="close"></div>
+		</div>
+		
+		<div class="popup-body">
+		
+		
+		
+		
+		<div class="main-bdy show" id="bdy1">
+			<div class="add-account-btn">ADD ACCOUNT</div>
+			<div class="hd">Wells Fargo <span tabindex="99999999">
+				<div class="ppp">
+					<div class="ppp-ln">
+					Refresh
+					</div>
+					<div class="ppp-ln">
+					Edit Password
+					</div>
+					<div class="ppp-ln">
+					Delete
+					</div>
+					
+				</div>
+			</span></div>
+			<div class="wells" id="wells">
+			<div class="ln" tabindex="90000000">
+				<span class="plus"></span>
+				<div class="txt">Checking - 4228</div>
+				<div class="amt">$2,869</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="collaps">
+					<div class="left">
+						<span>Name</span>
+						<input type="text" value="Business Checking - 8961" maxlength="28">
+						<div class="hl">15 / 28</div>
+					</div>
+					<div class="right">
+						<span>Type</span>
+						<select id="selectbox3">
+							<option>Checking</option>
+							<option>Saving</option>
+						</select>
+						<div class="save-btn">SAVE</div>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+			<div class="ln" tabindex="90000000">
+				<span class="plus"></span>
+				<div class="txt">Checking - 4228</div>
+				<div class="amt">$2,869</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="collaps">
+					<div class="left">
+						<span>Name</span>
+						<input type="text" value="Business Checking - 8961"  maxlength="28">
+						<div class="hl">15 / 28</div>
+					</div>
+					<div class="right">
+						<span>Type</span>
+						<select id="selectbox3">
+							<option>Checking</option>
+							<option>Saving</option>
+						</select>
+						<div class="save-btn">SAVE</div>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+			<div class="ln" tabindex="90000000">
+				<span class="plus"></span>
+				<div class="txt">Checking - 4228</div>
+				<div class="amt">$2,869</div>
+				<div class="clearfix"></div>
+				
+			</div>
+			<div class="collaps">
+					<div class="left">
+						<span>Name</span>
+						<input type="text" value="Business Checking - 8961"  maxlength="28">
+						<div class="hl">15 / 28</div>
+					</div>
+					<div class="right">
+						<span>Type</span>
+						<select id="selectbox3">
+							<option>Checking</option>
+							<option>Saving</option>
+						</select>
+						<div class="save-btn">SAVE</div>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+			<div class="ln" tabindex="90000000">
+				<span class="plus"></span>
+				<div class="txt">Checking - 4228</div>
+				<div class="amt">$2,869</div>
+				<div class="clearfix"></div>
+				
+			</div>
+			<div class="collaps">
+					<div class="left">
+						<span>Name</span>
+						<input type="text" value="Business Checking - 8961"  maxlength="28">
+						<div class="hl">15 / 28</div>
+					</div>
+					<div class="right">
+						<span>Type</span>
+						<select id="selectbox3">
+							<option>Checking</option>
+							<option>Saving</option>
+						</select>
+						<div class="save-btn">SAVE</div>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+			<div class="ln" tabindex="90000000">
+				<span class="plus"></span>
+				<div class="txt">Checking - 4228</div>
+				<div class="amt">$2,869</div>
+				<div class="clearfix"></div>
+				
+			</div>
+			<div class="collaps">
+					<div class="left">
+						<span>Name</span>
+						<input type="text" value="Business Checking - 8961"  maxlength="28">
+						<div class="hl">15 / 28</div>
+					</div>
+					<div class="right">
+						<span>Type</span>
+						<select id="selectbox3">
+							<option>Checking</option>
+							<option>Saving</option>
+						</select>
+						<div class="save-btn">SAVE</div>
+					</div>
+				</div>
+				
+				<div class="clearfix"></div>
+				
+				
+				
+			<!--<div class="ln" tabindex="90000000">
+				<span class="plus"></span>
+				<div class="txt">Checking - 4228</div>
+				<div class="amt">$2,869</div>
+				<div class="clearfix"></div>
+				
+			</div>
+			<div class="collaps">
+					<div class="left">
+						<span>Name</span>
+						<input type="text" value="Business Checking - 8961"  maxlength="28">
+						<div class="hl">15 / 28</div>
+					</div>
+					<div class="right">
+						<span>Type</span>
+						<select id="selectbox3">
+							<option>Checking</option>
+							<option>Saving</option>
+						</select>
+						<div class="save-btn">SAVE</div>
+					</div>
+				</div>
+			<div class="ln" tabindex="90000000">
+				<span class="plus"></span>
+				<div class="txt">Checking - 4228</div>
+				<div class="amt">$2,869</div>
+				<div class="clearfix"></div>
+				
+			</div>
+			<div class="collaps">
+					<div class="left">
+						<span>Name</span>
+						<input type="text" value="Business Checking - 8961"  maxlength="28">
+						<div class="hl">15 / 28</div>
+					</div>
+					<div class="right">
+						<span>Type</span>
+						<select id="selectbox3">
+							<option>Checking</option>
+							<option>Saving</option>
+						</select>
+						<div class="save-btn">SAVE</div>
+					</div>
+				</div>-->
+			
+			</div>
+		</div>
+		
+		
+		
+		<div class="main-bdy" id="bdy2">
+		<div class="bdy" >
+			<div class="section2">
+			<span class="label">Email</span>
+			<div class="edit">
+				<input type="text" placeholder="adam@websaucestudio.com" value="adam@websaucestudio.com" disabled="disabled" id="user">
+				<div class="edit-btn" onClick="$('#user').removeAttr('disabled')">Edit</div>
+			</div>
+			<span class="label">Password</span>
+			<div class="edit">
+				<input type="password" placeholder="password" value="password" disabled="disabled" id='pass'>
+				<div class="edit-btn" onClick="$('#pass').removeAttr('disabled')">Edit</div>
+			</div>
+			<span class="delete">DELETE ACCOUNT</span>
+			</div>
+		</div>
+		</div>
+		
+		
+		
+		
+		<div class="main-bdy" id="bdy3">
+		<div class="bdy set-padding-bottom">
+			<div class="section3">
+			<h2>General</h2>
+				<div class="line">
+					<div class="left">Summary Emails</div>
+					<div class="right">
+						<div class="select-holder">
+						<select class="selectbox" id="selectbox1">
+							<option>Weekly</option>
+							<option>Daily</option>
+							<option>Monthly</option>
+							<option>Yearly</option>
+						</select>
+						</div>
+						<div class="switch"><input type="checkbox" name="onoffswitch1" id="myonoffswitch1" class="myonoffswitch"></div>
+					</div>
+				</div>
+			<div class="line">
+					<div class="left">Advice Emails</div>
+					<div class="right">
+						<div class="select-holder">
+						
+						</div>
+						<div class="switch"><input type="checkbox" name="onoffswitch1" id="myonoffswitch2" class="myonoffswitch"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		
+		
+		<div class="bdy">
+			<div class="section3">
+			<h2>Spending Alerts</h2>
+				<div class="line">
+					<div class="left">Low Balance</div>
+					<div class="right">
+						<div class="select-holder">
+						<select class="selectbox" id="selectbox2">
+							<option>$100</option>
+							<option>$200</option>
+							<option>$300</option>
+							<option>$400</option>
+						</select>
+						</div>
+						<div class="switch"><input type="checkbox" name="onoffswitch1" id="myonoffswitch3" class="myonoffswitch"></div>
+					</div>
+				</div>
+				<div class="line">
+					<div class="left">Bill Reminders</div>
+					<div class="right">
+						<div class="select-holder">
+						
+						</div>
+						<div class="switch"><input type="checkbox" name="onoffswitch1" id="myonoffswitch4" class="myonoffswitch"></div>
+					</div>
+				</div>
+				<div class="line">
+					<div class="left">Large Deposits</div>
+					<div class="right">
+						<div class="select-holder">
+						
+						</div>
+						<div class="switch"><input type="checkbox" name="onoffswitch1" id="myonoffswitch5" class="myonoffswitch"></div>
+					</div>
+				</div>
+			</div>
+			</div>
+			
+		</div>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<div class="main-bdy" id="bdy4">
+			<div class="months">
+				<img src="images/left-arrow-white.png" width="8" height="12" alt="left arrow" id="left1">
+				<img src="images/rightt-arrow-white.png" width="8" height="12" alt="right arrow" id="right1">
+				<div class="inside">
+					<div class="month-scroller">
+						<div class="mnth">JAN</div>
+						<div class="mnth">FEB</div>
+						<div class="mnth">MAR</div>
+						<div class="mnth">APR</div>
+						<div class="mnth">MAY</div>
+						<div class="mnth">JUN</div>
+						<div class="mnth">JUL</div>
+						<div class="mnth">AUG</div>
+						<div class="mnth">SEP</div>
+						<div class="mnth">OCT</div>
+						<div class="mnth">NOV</div>
+						<div class="mnth">DEC</div>
+					</div>
+				</div>
+			</div>
+			<div class="bdy">
+				<div class="section4">
+					<div class="rw">
+						<div class="image"><img src="images/shap1.png" alt="food"></div>
+						<div class="frm">
+							<span>Food</span>
+							<input type="text" value="$500" disabled>
+						</div>
+					</div>
+					<div class="rw">
+						<div class="image"><img src="images/shape3.png" alt="food"></div>
+						<div class="frm">
+							<span>Bills</span>
+							<input type="text" value="$1800" disabled>
+						</div>
+					</div>
+					<div class="rw">
+						<div class="image"><img src="images/shape4.png" alt="food"></div>
+						<div class="frm">
+							<span>Transportation</span>
+							<input type="text" value="$300" disabled>
+						</div>
+					</div>
+					<div class="rw">
+						<div class="image"><img src="images/shape5.png" alt="food"></div>
+						<div class="frm">
+							<span>Other</span>
+							<input type="text" value="$800" disabled>
+						</div>
+					</div>
+					
+					<input type="submit" value="" class="edt1">
+					<input type="button" value="" class="edt">
+				</div>
+			</div>
+		
+			
+		</div>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		</div>
+		
+		
+		
+		
+		
+		</div>
+	</div>
+	
+
+<div class="overlay2"></div>
+<div class="confirm-box">
+	<div class="d1">Save changes?</div>
+	<div class="d2">NO, CONTINUE WITHOUT SAVING</div>
+	<div class="d3">YES</div>
+</div>
+
+
+
+
+<script>
+
+		var doughnutData = [
+				{
+					value: 17862,
+					color:"#ffa726",
+					highlight: "#f09e25",
+					label: "31%"
+				},
+				{
+					value: 12351,
+					color: "#ab47bc",
+					highlight: "#9f43af",
+					label: "25%"
+				},
+				{
+					value: 7049,
+					color: "#42a5f5",
+					highlight: "#3d98e2",
+					label: "16%"
+				},
+				{
+					value: 4962,
+					color: "#ec407a",
+					highlight: "#dd3e73",
+					label: "28%"
+				},
+				
+
+			];
+
+			var ctx = document.getElementById("chart-area").getContext("2d");
+			new Chart(ctx).Doughnut(doughnutData, {
+				
+				animationSteps: 80,
+				animationEasing: "easeInSine",
+				// Possible effects are:
+    // [easeInOutQuart, linear, easeOutBounce, easeInBack, easeInOutQuad,
+    //  easeOutQuart, easeOutQuad, easeInOutBounce, easeOutSine, easeInOutCubic,
+    //  easeInExpo, easeInOutBack, easeInCirc, easeInOutElastic, easeOutBack,
+    //  easeInQuad, easeInOutExpo, easeInQuart, easeOutQuint, easeInOutCirc,
+    //  easeInSine, easeOutExpo, easeOutCirc, easeOutCubic, easeInQuint,
+    //  easeInElastic, easeInOutSine, easeInOutQuint, easeInBounce,
+    //  easeOutElastic, easeInCubic]
+				responsive : true,
+				animateScale: false,
+				percentageInnerCutout : 75,
+				showTooltips: true,
+				tooltipFillColor: "transparent",
+				tooltipFontFamily: "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
+
+				// Number - Tooltip label font size in pixels
+				tooltipFontSize: 12,
+			
+				// String - Tooltip font weight style
+				tooltipFontStyle: "normal",
+			
+				// String - Tooltip label font colour
+				tooltipFontColor: "#fff",
+			
+				// String - Tooltip title font declaration for the scale label
+				tooltipTitleFontFamily: "roboto",
+			
+				// Number - Tooltip title font size in pixels
+				tooltipTitleFontSize: 12,
+			
+				// String - Tooltip title font weight style
+				tooltipTitleFontStyle: "bold",
+			
+				// String - Tooltip title font colour
+				tooltipTitleFontColor: "#fff",
+			
+				// Number - pixel width of padding around tooltip text
+				tooltipYPadding: -8,
+			
+				// Number - pixel width of padding around tooltip text
+				tooltipXPadding: 0,
+			
+				// Number - Size of the caret on the tooltip
+				tooltipCaretSize: 0,
+			
+				// Number - Pixel radius of the tooltip border
+				tooltipCornerRadius: 6,
+			
+				// Number - Pixel offset from point x to tooltip edge
+				//tooltipXOffset: 10,
+				scaleShowLabels: true,
+				tooltipCornerRadius: 2,
+				
+				
+				//customTooltips: true,
+				tooltipTemplate: "<%=label%>",
+				tooltipEvents: ["mousemove", "touchstart", "touchmove"],
+				
+				onAnimationComplete: function()
+				{
+					this.showTooltip(this.segments, true);
+				},
+				
+				
+			});
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>
